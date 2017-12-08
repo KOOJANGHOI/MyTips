@@ -24,6 +24,7 @@
   - netmask 255.255.255.0
   - network 192.168.x.0
 
+- 여기서 가상머신 reboot 하는 미덕 
 - sudo /etc/init.d/networking restart && sudo ssh restart
 - ifconfig 하면 ip가 192.168.x.101 으로 나올것.
 - terminal 에서 ssh [hostname]@[host ip address] & enter password
