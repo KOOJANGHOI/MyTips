@@ -1,5 +1,40 @@
 # MyTips
 
+# 우분투 포맷시 간단한 세팅
+
+
+- jdk : $ apt-get install openjdk-8-jdk & java -version
+- maven : $ apt-get install maven & mvn -version
+- zookeeper
+    - $wget http://apache.mirror.cdnetworks.com/zookeeper/stable/zookeeper-3.4.10.tar.gz
+    - $tar zxvf zookeeper-3.4.10.tar.gz
+    - $cp -Rf zookeeper-3.4.10 /usr/local/zookeeper
+    - $cd /usr/local/zookeeper
+    - $cp conf/zoo_sample.cfg conf/zoo.cfg
+    - zoo.cfg 파일 수정
+        - http://novicecoder.tistory.com/entry/Zookeeper설치
+    - 서버 구동
+        - ./bin/zkServer.sh start
+        - or
+        - sudo bash zkServer.sh start
+
+
+
+# sql file import
+
+- [db name] 으로 database 미리 생성
+- $ cd {where .sql file located}
+- mysql -u root -p [db name] < dump.sql
+
+
+
+
+# 22번 포트 열기
+- sudo systemsetup -setremotelogin on
+- 확인 : $tcping 127.0.0.1 [port]
+
+
+
 
 # mac terminal --> ubuntu ssh connection
 
