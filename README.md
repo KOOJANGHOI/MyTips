@@ -1,7 +1,6 @@
 # MyTips
 
-# 우분투 포맷시 간단한 세팅
-
+# ubuntu simple setting
 
 - jdk : $ apt-get install openjdk-8-jdk & java -version
 - maven : $ apt-get install maven & mvn -version
@@ -18,7 +17,7 @@
         - or
         - sudo bash zkServer.sh start
 
-
+----
 
 # sql file import
 
@@ -26,15 +25,13 @@
 - $ cd {where .sql file located}
 - mysql -u root -p [db name] < dump.sql
 
-
-
+----
 
 # 22번 포트 열기
 - sudo systemsetup -setremotelogin on
 - 확인 : $tcping 127.0.0.1 [port]
 
-
-
+----
 
 # mac terminal --> ubuntu ssh connection
 
@@ -51,16 +48,17 @@
 - sudo apt-get update
 - sudo apt-get install openssh-server openssh-client & sudo apt-get install ssh
 - 위 메뉴얼의 1~4.
-- enp0s8 ip가 검색되지 않으면 /etc/network/interfaces 에 다음을 추가
+- ifconfig 에서 ip가 나오지 않는 이름 : enp0s8(다를 수 있음)
 
+- $sudo vi /etc/network/interfaces & 다음을 추가
   - auto enp0s8
   - iface enp0s8 inet static
-  - address 192.168.x.101
-  - netmask 255.255.255.0
+  - address 192.168.x.101 (192.168.x.x ==> 우분투 설정에 나온 ip)
+  - netmask 255.255.255.0
   - network 192.168.x.0
-
-- 여기서 가상머신 reboot 하는 미덕 
-- sudo /etc/init.d/networking restart && sudo ssh restart
+  
+- 가상머신 reboot
+- $sudo /etc/init.d/networking restart or $sudo service ssh start/restart
 - ifconfig 하면 ip가 192.168.x.101 으로 나올것.
 - terminal 에서 ssh [hostname]@[host ip address] & enter password
 - 만약 host key varified failed 가 뜨면 ssh-keygen -R [host ip address]
