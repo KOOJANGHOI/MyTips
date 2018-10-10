@@ -73,7 +73,9 @@ https://m.blog.naver.com/PostView.nhn?blogId=fewus28&logNo=221071674293&proxyRef
 sudo vi ~/.vimrc
 
 set hlsearch " 검색어 하이라이팅
+
 set nu " 줄번호
+
 set autoindent " 자동 들여쓰기
 set scrolloff=2
 set wildmode=longest,list
