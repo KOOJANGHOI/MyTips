@@ -62,3 +62,9 @@
 - ifconfig 하면 ip가 192.168.x.101 으로 나올것.
 - terminal 에서 ssh [hostname]@[host ip address] & enter password
 - 만약 host key varified failed 가 뜨면 ssh-keygen -R [host ip address]
+
+# 방법 3
+https://m.blog.naver.com/PostView.nhn?blogId=fewus28&logNo=221071674293&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F
+
+
+----
